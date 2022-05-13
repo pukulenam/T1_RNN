@@ -9,13 +9,9 @@ from scipy.sparse.linalg import svds
 nltk.download('punkt')
 nltk.download('stopwords')
 
-# write them into a CSV file
+# Membaca isi news text yang ada di csv file
 tes = pd.read_csv('C:/BANGKIT2022/BismillahCapstone/lsa extractor/englishline1.csv')
 DOCUMENT = tes["text"].to_list()
-
-DOCUMENT = re.sub(r'\n|\r', ' ', str(DOCUMENT))
-DOCUMENT = re.sub(r' +', ' ', str(DOCUMENT))
-DOCUMENT = DOCUMENT.strip()
 
 #Tahap memisahkan kalimat yang ada di dokumen
 sentences = nltk.sent_tokenize(str(DOCUMENT)) #pisah perkalimat pake koma
