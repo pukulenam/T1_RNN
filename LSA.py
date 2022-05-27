@@ -3,13 +3,13 @@ import csv
 import pandas as pd
 import re
 import numpy as np
+import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.sparse.linalg import svds
 
 nltk.download('punkt')
 nltk.download('stopwords')
 
-# Membaca isi news text yang ada di csv file
 tes = pd.read_csv('C:/BANGKIT2022/BismillahCapstone/lsa extractor/englishline1.csv')
 DOCUMENT = tes["text"].to_list()
 
@@ -55,7 +55,7 @@ def low_rank_svd(matrix, singular_count=2):
     u, s, vt = svds(matrix, k=singular_count)
     return u, s, vt
 
-number_sentences = 8
+number_sentences = round(len(sentences) * 0.3) #diambil 30% dari total kalimat
 number_topics = 3
 
 u, s, vt = low_rank_svd(td_matrix, singular_count=number_topics)  
