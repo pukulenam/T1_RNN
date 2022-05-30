@@ -7,7 +7,7 @@ import LSAbaru
 from wtforms.validators import InputRequired
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'supersecretkey' #harus ngerti
+app.config['SECRET_KEY'] = 'supersecretkey'
 app.config['UPLOAD_FOLDER'] = 'static/files'
 
 class UploadFileForm(FlaskForm):
@@ -15,7 +15,6 @@ class UploadFileForm(FlaskForm):
     submit = SubmitField("Upload File")
 
 @app.route('/', methods=['GET',"POST"])
-@app.route('/home', methods=['GET',"POST"])
 def home():
     form = UploadFileForm()        
     if form.validate_on_submit():
@@ -23,7 +22,7 @@ def home():
         path = os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'],secure_filename(file.filename))
         file.save(path)
         result = LSAbaru.LSA(path)
-        return render_template('return.html', result=result) #"File has been uploaded."
+        return render_template('return.html', result=result)
     return render_template('index.html', form=form)
 
 if __name__ == '__main__':
