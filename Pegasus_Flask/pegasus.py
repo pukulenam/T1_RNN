@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-#importing the PEGASUS Transformer model and other library
 import cgi, cgitb
 import pandas as pd
 from sentence_splitter import SentenceSplitter
@@ -31,12 +29,6 @@ def paraphrase_sentence(sentence, num_return_sequences):
 
   return paraphrased_sentence
 
-#inputing the file as input
-#file = open('./tes.txt', 'r')
-#text = file.read()
-# text = input("Input text here: /n")
-
-# Takes the input paragraph and splits it into a list of sentences
 splitter = SentenceSplitter(language='en')
 
 #defining the paraphrase function
@@ -53,10 +45,3 @@ def paraphrase(text):
   paraphrased_text = str(paraphrased_text).strip('[]').strip("\"")
   
   return paraphrased_text
-
-# Comparison of the original (context variable) and the paraphrased version (paraphrase3 variable)
-# paraphrased_text = paraphrase(text)
-# print(text)
-# print("/n")
-# print("/n")
-# print(paraphrased_text)
