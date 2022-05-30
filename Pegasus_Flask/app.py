@@ -19,7 +19,7 @@ class UploadFileForm(FlaskForm):
     file = FileField("file", validators=[InputRequired()])
     submit = SubmitField("Upload File")
 
-@app.route('/', methods=['POST'])
+@app.route('/index', methods=['POST'])
 def getValue():
     form = UploadFileForm()        
     if form.validate_on_submit():
