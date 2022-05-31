@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@400;500;600;700&family=Roboto:wght@100&family=Tenor+Sans&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    background: #f85f56;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home{
+    display: flex;
+    min-height: 500px;
+    align-items: center;
+}
+
+.generator{
+    display: flex;
+    min-height: 300px;
+    align-items: center;
+    font-size: 36px;
+}
+
+a:-webkit-any-link {
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.box{
+    width: 600px;
+    padding: 20px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f85f56;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.box h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.box input[type="text"],.box input[type="password"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border:3px solid white;
+    padding: 14px 20px;
+    width: 275px;
+    outline: white;
+    border-radius: 24px;
+    transition: 0.25px;
+}
+
+.box input[type="text"]:focus,.box input[type="password"]:focus
+{
+    width: 270px;
+    border-color: black;
+}
+
+.box input[type="submit"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border:3px solid white;
+    padding: 14px 35px;
+    outline: white;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover{
+    background: white;
+
+}
+
+.insert{
+    width: 600px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f85f56;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.insert h1{
+    color: #fff;
+    font-weight: 200;
+    font-size: 24px;
+}
+
+.insert input[type="text"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border:3px solid white;
+    padding: 14px 20px;
+    width: 275px;
+    outline: white;
+    border-radius: 24px;
+    transition: 0.25px;
+}
+
+.insert input[type="text"]:focus
+{
+    width: 270px;
+    border-color: black;
+}
+
+.insert input[type="Generate"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border:3px solid white;
+    padding: 14px 5px;
+    outline: white;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+.insert input[type="submit"]:hover{
+    background: white;
+
+}
+
+.download{
+    width: 600px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    background: #f85f56;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.download h1{
+    color: #fff;
+    font-weight: 200;
+    font-size: 24px;
+}
