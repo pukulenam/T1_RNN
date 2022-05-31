@@ -8,30 +8,30 @@ import os
 import pegasus
 import LSAbaru
 
-app = Flask(__name__)
-app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.config['SECRET_KEY'] = 'supersecretkey'
-app.config['UPLOAD_FOLDER'] = 'static/files'
-
-@app.route('/')
-def index():
-    return render_template("index.html")
-
 class UploadFileForm(FlaskForm):
     file = FileField("file", validators=[InputRequired()])
     submit = SubmitField("Upload File")
 
-@app.route('/index', methods=['POST'])
+def remove_escape_char(text):
+    """Removing escape character from a given text."""
+    result = bytes(text, 'utf-8').decode('unicode_escape')
+    return result  
+
+app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.config['SECRET_KEY'] = 'supersecretkey'
+app.config['UPLOAD_FOLDER'] = 'uploaded_files'
+
+@app.route('/', methods=['GET', 'POST'])
 def getValue():
     form = UploadFileForm()        
     if form.validate_on_submit():
-        file = form.file.data # First grab the file
+        file = form.file.data
         path = os.path.join(os.path.abspath(os.path.dirname(__file__)),app.config['UPLOAD_FOLDER'],secure_filename(file.filename))
         file.save(path)
-    # text = request.form['news_sum']
         text = LSAbaru.LSA(path)
         paraphrase_text = pegasus.paraphrase(text)
-        return render_template('output.html', news_sum=text, paraphrase_text=paraphrase_text)
+        return render_template('output.html', news_sum=text, paraphrase_text=remove_escape_char(paraphrase_text))
     return render_template('index.html', form=form)
 
 if __name__ == "__main__":

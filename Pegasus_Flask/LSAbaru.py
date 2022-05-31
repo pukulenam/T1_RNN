@@ -21,7 +21,7 @@ def LSA(file):
 
     #Tahap memisahkan kalimat yang ada di dokumen
     sentences = nltk.sent_tokenize(str(DOCUMENT)) #pisah perkalimat pake koma
-    print(sentences)
+    # print(sentences)
 
     #Memasukkan fungsi stopwords ke variabel stop_words
     stop_words = nltk.corpus.stopwords.words('english')
@@ -53,7 +53,7 @@ def LSA(file):
     dt_matrix = dt_matrix.toarray()
     vocab = tfidVector.get_feature_names()
     td_matrix = dt_matrix.T
-    print(td_matrix.shape)
+    # print(td_matrix.shape)
     pd.DataFrame(np.round(td_matrix, 2), index=vocab).head(10)
 
     #Mengurai matrix dalam bentuk yang sederhana untuk mempermudah pengolahan data
@@ -65,7 +65,7 @@ def LSA(file):
     number_topics = 3 #ini k nya
 
     u, s, vt = low_rank_svd(td_matrix, singular_count=number_topics)  
-    print(u.shape, s.shape, vt.shape)
+    # print(u.shape, s.shape, vt.shape)
     term_topic_mat, singular_values, topic_document_mat = u, s, vt
 
     # Menghilangkan Nilai Singular di bawah ambang batas                                     

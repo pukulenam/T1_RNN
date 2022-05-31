@@ -42,6 +42,6 @@ def paraphrase(text):
 
   paraphrased_sentences = [' '.join(x) for x in paraphrased_list]
   paraphrased_text = [' '.join(x for x in paraphrased_sentences) ]
-  paraphrased_text = str(paraphrased_text).strip('[]').strip("\"")
+  paraphrased_text = str(paraphrased_text).strip("\"'[]")
   
   return paraphrased_text
