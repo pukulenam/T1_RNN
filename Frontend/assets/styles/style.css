@@ -72,6 +72,7 @@
     top: 65%;
     transform: translateY(-50%);
     color: black;
+    font-family: sans-serif;
 }
 
 .content h1{
@@ -129,6 +130,7 @@ button:hover{
     top: 17.5%;
     transform: translateY(-50%);
     color: black;
+    font-family: sans-serif;
 }
 
 .pegasus-content{
@@ -138,128 +140,13 @@ button:hover{
     top: 17.5%;
     transform: translateY(-50%);
     color: black;
+    font-family: sans-serif;
+
 }
 a:-webkit-any-link {
     color: #fff;
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
-
-}
-
-.box{
-    width: 600px;
-    padding: 20px;
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #f85f56;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.box h1{
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.box input[type="text"],.box input[type="password"]
-{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border:3px solid white;
-    padding: 14px 20px;
-    width: 275px;
-    outline: white;
-    border-radius: 24px;
-    transition: 0.25px;
-}
-
-.box input[type="text"]:focus,.box input[type="password"]:focus
-{
-    width: 270px;
-    border-color: black;
-}
-
-.box input[type="submit"]
-{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border:3px solid white;
-    padding: 14px 35px;
-    outline: white;
-    border-radius: 24px;
-    transition: 0.25px;
-    cursor: pointer;
-}
-
-.box input[type="submit"]:hover{
-    background: white;
-
-}
-
-.insert{
-    width: 600px;
-    padding: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #f85f56;
-    border-radius: 20px;
-    text-align: center;
-    margin-top: 300px;
-}
-
-.insert h1{
-    color: #fff;
-    font-weight: 200;
-    font-size: 24px;
-}
-
-.insert input[type="text"]
-{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border:3px solid white;
-    padding: 14px 20px;
-    width: 275px;
-    outline: white;
-    border-radius: 24px;
-    transition: 0.25px;
-}
-
-.insert input[type="text"]:focus
-{
-    width: 270px;
-    border-color: black;
-}
-
-.insert input[type="Generate"]
-{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border:3px solid white;
-    padding: 14px 5px;
-    outline: white;
-    border-radius: 24px;
-    transition: 0.25px;
-    cursor: pointer;
-}
-.insert input[type="submit"]:hover{
-    background: white;
 
 }
 
@@ -279,4 +166,171 @@ a:-webkit-any-link {
     color: #fff;
     font-weight: 200;
     font-size: 24px;
+}
+
+.lsa-content{
+    width: 800px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    margin-top: 10px;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #f85f56;
+    border-radius: 25px;
+}
+
+.lsa-content h1{
+    color: #f85f56;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.lsa-content p{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.lsa-content .link-container, .button-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.lsa-content .button-container{
+    align-items: center;
+}
+
+.lsa-content .link-container label{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    align-items: center;
+}
+.lsa-content .link-container input{
+    outline: none;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 2px solid black;
+    font-size: 14px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 850px){
+    .lsa-content{
+        width:500px;
+    }
+
+    .lsa-content .link-container, .button-container{
+        width: 300px;
+        align-items: center;
+    }
+
+    .lsa-content .link-container label, .link-container input{
+        align-items: center;
+    }
+}
+
+.pegasus-content{
+    width: 800px;
+    height: 450px;
+    background-color: #fff;
+    position: absolute;
+    margin-top: 10px;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #f85f56;
+    border-radius: 25px;
+}
+
+.pegasus-content h1{
+    color: #f85f56;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.pegasus-content p{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.pegasus-content .link-container, .button-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.pegasus-content .button-container{
+    align-items: center;
+}
+
+.pegasus-content .link-container label{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    align-items: center;
+}
+.pegasus-content .link-container input{
+    outline: none;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 2px solid black;
+    font-size: 14px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 850px){
+    .pegasus-content{
+        width:500px;
+    }
+
+    .pegasus-content .link-container, .button-container{
+        width: 300px;
+        align-items: center;
+    }
+
+    .pegasus-content .link-container label, .link-container input{
+        align-items: center;
+    }
+}
+
+
+@media only screen and (max-width: 550px){
+    .pegasus-content{
+        width:350px;
+        height: 450px;
+    }
+
+    .pegasus-content .link-container, .button-container{
+        width: 300px;
+        align-items: center;
+    }
+
+    .pegasus-content .link-container label, .link-container input{
+        align-items: center;
+    }
 }
