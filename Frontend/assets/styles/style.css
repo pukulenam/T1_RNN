@@ -17,6 +17,7 @@
     width: 100%;
     padding: 15px 0;
     background: #f85f56;
+    margin: auto;
 }
 
 .navbar .max-width{
@@ -30,31 +31,114 @@
     font-weight: 600;
 }
 
-.navbar .menu li{
+.navbar ul li{
     list-style: none;
     display: inline-block;
+    position: relative;
+    margin: 0 20px;
 }
-.navbar .menu li a{
+.navbar ul li a{
+    text-decoration: none;
     color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 50px;
-    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    background: #fff;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
 }
 
 .home{
     display: flex;
-    min-height: 500px;
+    min-height: 450px;
     align-items: center;
 }
 
-.generator{
-    display: flex;
-    min-height: 300px;
-    align-items: center;
-    font-size: 36px;
+
+.content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    color: black;
 }
 
+.content h1{
+    font-size: 32px;
+    margin-top: 80px;
+}
+
+.content p{
+    margin: 15px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #f85f56;
+    background: white;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #f85f56;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    background: #f85f56;
+    color: white;
+    border: none;
+}
+
+.lsa-content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 17.5%;
+    transform: translateY(-50%);
+    color: black;
+}
+
+.pegasus-content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 17.5%;
+    transform: translateY(-50%);
+    color: black;
+}
 a:-webkit-any-link {
     color: #fff;
     cursor: pointer;
@@ -130,6 +214,7 @@ a:-webkit-any-link {
     background: #f85f56;
     border-radius: 20px;
     text-align: center;
+    margin-top: 300px;
 }
 
 .insert h1{
