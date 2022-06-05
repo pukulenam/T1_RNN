@@ -9,10 +9,8 @@ from scipy.sparse.linalg import svds
 nltk.download('punkt')
 nltk.download('stopwords')
 
-# write them into a CSV file
-#tes = pd.read_csv('D:/Semester 6/Bangkit 2022/englishline1.csv') #path-nya ganti
 def LSA(file):
-    f = open(file, 'r') # tes["text"].to_list()
+    f = open(file, 'r')
     DOCUMENT = f.read()
 
     DOCUMENT = re.sub(r'\n|\r', ' ', str(DOCUMENT))
