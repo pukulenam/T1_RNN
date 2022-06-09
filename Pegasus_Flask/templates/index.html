@@ -1,21 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="'en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing Python</title>
+    <title>PukulEnam</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <h1>Flask File Uploads Tutorial</h1>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="/home">PukulEnam</a></div>
+            <ul>
+                <li><a href="/lsa">LSA</a></li> 
+                <li><a href="/lsa+pegasus">LSA & PEGASUS</a></li> 
+            </ul>
+        </div>
+    </nav>
 
-    <form method='POST' enctype='multipart/form-data'>
-        {{form.hidden_tag()}}
-        {{form.file()}}
-        {{form.submit()}}
-    </form>
+    <!-- home section part -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <a href="#pukulenam"><img src="static/image/pukulenam.png" width="500px"></a></div>
+        </div>
+    </section>
+
+    <!-- content -->
+    <!-- <section class="lsa-content" id="home">
+        <div class="max-width">
+            <div class="lsa">
+                <h1>SCRAPER</h1>
+                <div class="link-container">
+                    <label for="">News Link:</label>
+                    <input type="text" class="link" name="link" placeholder="Enter news Link" required>
+                </div>
+                <div class="button-container">
+                    <button class="btn" type="submit">Generate</button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Welcome -->
+    <section class="content" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <h1>WELCOME TO NEWS GENERATOR</h1>
+                <p>Choose your method here</p>
+                <div class="row">
+                    <div class="center">
+                        <div class="column">
+                            <div class="btn-index">
+                                <a href="/lsa">
+                                    <button class="btn" type="button">LSA</button>
+                                </a><br>
+                            </div>
+                            <div class="desc">
+                                <p>Metode ini memungkinkan Anda untuk meringkas berita dari suatu sumber dalam waktu yang singkat.</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="btn-index">
+                                <a href="/lsa+pegasus">
+                                    <button class="btn" type="button">LSA & PEGASUS</button>
+                                </a><br>
+                            </div>
+                            <div class="desc">
+                                <p>Metode ini memungkinkan Anda untuk meringkas berita dari suatu sumber sekaligus melakukan parafrase.</p>
+                            </div>
+                        </div>
+                    </div>
+                                            
+                </div>
+            </div>
+        </div>
+    </section>
+
+     
 
 </body>
 

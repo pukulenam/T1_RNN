@@ -22,6 +22,9 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SECRET_KEY'] = 'supersecretkey'
 app.config['UPLOAD_FOLDER'] = 'uploaded_files'
 
+@app.route('/home', methods=['GET', 'POST'])
+def home():
+    return render_template('index.html')
 @app.route('/lsa', methods=['GET', 'POST'])
 def lsa():
     form = UploadFileForm()        
@@ -31,7 +34,7 @@ def lsa():
         file.save(path)
         text = LSA.LSA(path)
         return render_template('output_lsa.html', news_sum=text)
-    return render_template('index.html', form=form)
+    return render_template('index2.html', form=form)
 
 @app.route('/lsa+pegasus', methods=['GET', 'POST'])
 def lsa_pegasus():
@@ -43,7 +46,7 @@ def lsa_pegasus():
         text = LSA.LSA(path)
         paraphrase_text = pegasus.paraphrase(text)
         return render_template('output_lsa_pegasus.html', news_sum=text, paraphrase_text=remove_escape_char(paraphrase_text))
-    return render_template('index.html', form=form)
+    return render_template('index2.html', form=form)
 
 if __name__ == "__main__":
     app.run(debug=True)

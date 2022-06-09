@@ -78,7 +78,7 @@ def LSA(file):
     top_sentence_indices = (-salience_scores).argsort()[:number_sentences]
     top_sentence_indices.sort()
 
-    words = '\n'.join(np.array(sentences)[top_sentence_indices])
+    words = ' '.join(np.array(sentences)[top_sentence_indices])
     #print(words.replace("\\", ""))
 
     return words.replace("\\", "")

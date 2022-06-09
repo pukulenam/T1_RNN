@@ -4,13 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}"/>
+
 </head>
 
 <body>
-    <p>TEKS HASIL LSA:</p>
-    <p>{{news_sum}}</p> <!-- teks awal -->
-    <p>TEKS PARAFRASE DARI LSA:</p>
-    <p>{{paraphrase_text}}</p> <!-- hasil parafrase -->
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="/home">PukulEnam</a></div>
+            <ul>
+                <li><a href="/lsa">LSA</a></li> 
+                <li><a href="/lsa+pegasus">LSA & PEGASUS</a></li> 
+            </ul>
+        </div>
+    </nav>
+
+    <div class="lsa-result">
+        <h1>TEKS HASIL LSA:</h1>
+        <textarea id="copyText">{{news_sum}}</textarea> <!-- teks awal -->
+        <div class="copy"><button id="copyButton">copy in clipboard</button></div>
+    </div>
+
+    <div class="lsa-result">
+        <h1>TEKS PARAFRASE DARI LSA:</h1>
+        <textarea id="copyText2">{{paraphrase_text}}</textarea> <!-- hasil parafrase -->
+        <div class="copy"><button id="copyButton2">copy in clipboard</button></div>
+
+    </div>
+
+    <script>
+        const tx = document.getElementsByTagName("textarea");
+for (let i = 0; i < tx.length; i++) {
+  tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
+  tx[i].addEventListener("input", OnInput, false);
+}
+
+function OnInput() {
+  this.style.height = "auto";
+  this.style.height = (this.scrollHeight) + "px";
+}
+        let copyText = document.getElementById("copyText");
+        let copyButton = document.getElementById("copyButton");
+        let copyText2 = document.getElementById("copyText2");
+        let copyButton2 = document.getElementById("copyButton2");
+
+        copyButton.onclick = function(){
+            copyText.select();
+            document.execCommand("copy");
+        }
+
+        copyButton2.onclick = function(){
+            copyText2.select();
+            document.execCommand("copy");
+        }
+    </script>
+   
 </body>
 
 </html>
