@@ -7,6 +7,8 @@ from werkzeug.utils import secure_filename
 import os
 import pegasus
 import LSA
+import subprocess
+
 
 class UploadFileForm(FlaskForm):
     file = FileField("file", validators=[InputRequired()])
@@ -25,6 +27,21 @@ app.config['UPLOAD_FOLDER'] = 'uploaded_files'
 @app.route('/home', methods=['GET', 'POST'])
 def home():
     return render_template('index.html')
+
+@app.route('/scraper', methods=['GET', 'POST'])
+def scraper():
+    return render_template('scraper.html')
+
+    # proc = subprocess.Popen("php templates/scraper.php", shell=True, stdout=subprocess.PIPE)
+    # script_response = proc.stdout.read()
+    # w_dir = os.getcwd()
+    # out = sp.run(["php", os.path.join(w_dir, "templates/scraper.php")], stdout=sp.PIPE)
+    # return out.stdout
+
+# @app.route('/output_scraper', methods=['GET', 'POST'])
+# def output_scraper():
+#     return render_template('output_scraper.html')
+
 @app.route('/lsa', methods=['GET', 'POST'])
 def lsa():
     form = UploadFileForm()        

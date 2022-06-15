@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}"/>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="/home">PukulEnam</a></div>
+            <ul>
+                <li><a href="/lsa">LSA</a></li> 
+                <li><a href="/lsa+pegasus">LSA & PEGASUS</a></li> 
+            </ul>
+        </div>
+    </nav>
+
+    <div  class="result">
+        <div id="scraped" class="lsa-result"> </div>
+        <button id="button">Download File</button>
+    </div>
+
+    <script src="./static/js/scraper.js"></script>
+    <script>
+        var button = document.getElementById('button')
+        
+        button.addEventListener('click', function(e){
+            var textareaVal = document.getElementById('scraped').innerHTML;
+            var date = new Date();
+            var filename = 'scrapedFile_' + date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear() + '.txt';    
+        
+            download(textareaVal, filename)
+        })
+        
+        function download(textareaVal, filename){
+            var element = document.createElement('a')
+        
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textareaVal))
+            element.setAttribute('download', filename)
+            element.style.display = 'none'
+        
+            document.body.appendChild(element)
+            element.click()
+            document.body.removeChild(element)
+        }
+        </script>
+</body>
+</html>

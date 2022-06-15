@@ -115,6 +115,13 @@ button:hover{
     font-family: sans-serif;
 }
 
+.scraper-content{
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+}
+
 a:-webkit-any-link {
     color: #fff;
     cursor: pointer;
@@ -139,7 +146,19 @@ a:-webkit-any-link {
     border-radius: 25px;
 }
 
-.lsa-content h1{
+.scraper-content{
+    width: 50%;
+    height: 30%;
+    background-color: #fff;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #f85f56;
+    border-radius: 25px;
+}
+
+.lsa-content h1, .scraper-content h1{
     color: #f85f56;
     padding: 5px;
     margin-bottom: 10px;
@@ -147,13 +166,13 @@ a:-webkit-any-link {
     text-align: center;
 }
 
-.lsa-content p{
+.lsa-content p, .scraper-content p{
     margin-bottom: 30px;
     text-align: center;
 }
 
 
-.lsa-content .button-container{
+.lsa-content .button-container, .scraper-content .button-container, .scraper-result .button-container{
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
@@ -161,16 +180,20 @@ a:-webkit-any-link {
     font-size: medium;
 }
 
-.lsa-content .button-container{
+.lsa-content .button-container, .scraper-content .button-container, .scraper-result .button-container{
     align-items: center;
 }
 
-.lsa-content label{
+.lsa-content label, .scraper-content label{
     font-size: medium;
 }
 
 .upload{
     font-family: sans-serif;
+}
+
+.btn-download{
+    margin: 30px;
 }
 
 form{
@@ -262,11 +285,19 @@ form{
 
 /* LSA PAGE AND LSA+PEGASUS OUTPUT */
 
-.result{
-    height: 100%;
+.scraper-result{
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+    display: none;
+    font-family: sans-serif;
+    padding:50px 50px 0;
+    text-align: justify;
+    border: 2px solid #f85f56;
+    border-radius: 25px;
+    width: 50%;
+    margin: 50px auto;  
 }
 .lsa-result{
     font-family: sans-serif;

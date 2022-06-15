@@ -10,7 +10,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 def LSA(file):
-    f = open(file, 'r')
+    f = open(file, 'r', encoding="utf8")
     DOCUMENT = f.read()
 
     DOCUMENT = re.sub(r'\n|\r', ' ', str(DOCUMENT))
