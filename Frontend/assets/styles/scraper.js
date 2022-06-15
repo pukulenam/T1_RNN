@@ -5,10 +5,10 @@ const { append } = require("domutils");
 document.getElementsByTagName("h1")[0].style.fontSize = "6vw";
 
 let urlNews =  document.getElementById("query") // request.input("url"); */
-// let hasil = document.getElementById("query");
+// let hasil = document.getElementById("query");src="https://code.jquery.com/jquery-3.6.0.min.js"
 
 function submitData() {
-    let hasilScraping = document.getElementById("scraped")
+   // let hasilScraping = document.getElementById("scraped")
     let hasil = document.getElementById("query").value;
     let textnya =  fetch("https://puknamscraper.herokuapp.com/v1/scraper/newswebmd?url=" + hasil)
                 .then((data)=>{
@@ -21,16 +21,17 @@ function submitData() {
                 // .then((data)=> {
                 //     // document.write(hasilScraping);
                 // })
-                .then((json)=>console.log(json))
+                .then((json)=>document.getElementById("scraped").innerHTML=JSON.stringify(json))
                 .catch((error)=>console.log('error '+error))
                     alert(hasil);
                 
+                // let hasilnya = data.value;
+                // $(#scraped).html(query)
                 // data.foreach(hasilScraping => {
                 //     const scraping = textnya
-
-
                 // })
 }
+ 
 
 // function scraped() {
 //     let hasilScraping = document.getElementsById("scraped")

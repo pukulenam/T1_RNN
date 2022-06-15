@@ -23,19 +23,22 @@
             <div class="lsa">
                 <h1>SCRAPER</h1>
                 <p>Mengambil isi data berita</p>
-                <div class="link-container">
-                    <label for="">News Link:</label>
-                    <input type="text" id="query" class="link" name="link" placeholder="Enter news Link" required>
-                </div>
+                <form action="home.html" method="GET">
+                    <div class="link-container">
+                        <label for="">News Link:</label>
+                        <input type="text" id="query" class="link" name="link" placeholder="Enter news Link" required>
+                    </div>
+                </form>
                 <div class="button-container">
                     <button onclick="submitData()" class="btn" type="submit">Generate</button>
                 </div>
                 <div  class="result">
                     <div id="scraped" class="lsa-result">
                         <!-- <h1>NEWS SCRAPING:</h1>
-                        <textarea id="copyText">{{news_sum}}</textarea> // teks awal // -->
-                        <!-- <div class="copy"><button id="copyButton">copy in clipboard</button><span class="tooltip">Copied</span></div> --> 
+                            <textarea id="copyText">{{news_sum}}</textarea> // teks awal // -->
+                            <!-- <div class="copy"><button id="copyButton">copy in clipboard</button><span class="tooltip">Copied</span></div> --> 
                     </div>
+                    <button id="button">Download File</button>
                 </div>
 
                 <!-- <div class="tampildata"></div>
@@ -65,6 +68,29 @@
     </div> -->
 
     <script src="./assets/styles/scraper.js"></script>
+    <script>
+        var button = document.getElementById('button')
+        
+        button.addEventListener('click', function(e){
+            var textareaVal = document.getElementById('scraped').innerHTML;
+            var date = new Date();
+            var filename = 'scrapedFile_' + date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear() + '.txt';    
+        
+            download(textareaVal, filename)
+        })
+        
+        function download(textareaVal, filename){
+            var element = document.createElement('a')
+        
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textareaVal))
+            element.setAttribute('download', filename)
+            element.style.display = 'none'
+        
+            document.body.appendChild(element)
+            element.click()
+            document.body.removeChild(element)
+        }
+        </script>
 </body>
 
 </html>
