@@ -1,4 +1,3 @@
 # T1_RNN
 
-How to Run this app
-Don't forget to add "/home" after the URL
+Don't forget to add "/home" after the URL to run the app
