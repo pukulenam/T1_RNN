@@ -1,9 +1,39 @@
 # PEO1 NEWS SUMMARIZER & PARAPHRASER
 
-* [Mengunduh repository ke dalam komputer](http://https://github.com/pukulenam/T1_RNN/README#download-repository)
-* [Memperbarui repository yang telah diunduh](https://github.com/pukulenam/T1_RNN/README#memperbarui-repository)
-* [Penggunaan Sraper API](https://github.com/pukulenam/T1_RNN/README#Penggunaan-scraper-API)
-* [Penggunaan Seluruh Aplikasi](https://github.com/pukulenam/T1_RNN/README#Penggunaan-seluruh-aplikasi)
+## Download Repository 
+
+Download repository into device using `git clone`. Url
+
+```
+git clone https://github.com/pukulenam/T1_RNN.git <folder tujuan>
+```
+
+## Update Repository
+
+Update the repository that has been downloaded to the computer using `git pull`.
+
+```
+git pull origin <branch name>
+
+```
+
+## Penggunaan Sraper API
+
+Link endpoint that can be used:
+https://puknamscraper.herokuapp.com/v1/scraper
+
+To change the framework of the API, you can use the scraper file in the repository.
+* Clone the Repository.
+* Watch file .env .
+* Run NPM Install .
+
+## Use The Application 
+* Clone the Repository.
+* Download the requirements.
+* Run on your Local Host.
+
+
+# Bahasa Indonesia
 
 ## Download Repository 
 
