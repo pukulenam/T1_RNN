@@ -1,0 +1,22 @@
+By the time you read this, Bloodhound will already have started the 5,500-mile journey south to its Hakskeenpan desert track in South Africa.
+There's been a huge amount of work over the past few weeks to get the car ready.
+Some of the key bits of hardware on the car have only recently arrived, including our Rolls-Royce EJ200 jet engine, once all the paperwork was in place (borrowing a state-of-the-art military jet engine is, quite rightly, a non-trivial process).  
+Each bit then needs testing to make sure it will work when we unpack it 5,500 miles away in South Africa.
+This includes the complex jet engine systems, which have to mimic the controls of the Eurofighter-Typhoon to make the jet engine think it's at home.
+Our first attempt to simulate a jet engine start was unsuccessful (I would emphasise the word "simulate" - we've got a great relationship with our hosts at Berkeley Green UTC, but if we fired up a jet engine inside the college, the relationship might become a little strained).
+The wheel hubs are an "interference fit" inside the wheel bearings.
+While we've been busy getting the car ready, the Northern Cape government has been doing some terrific work to get the desert fully race ready.
+When we arrive out in South Africa, we'll have to get the car ready to run on the desert.
+Once everything has been checked over, we'll be ready to start our high-speed test programme.
+Every single run will have a detailed schedule, known as the "run profile", with a target speed and a list of test objectives.
+We're planning on up to 12 run profiles, with the later runs depending on the results from the first few tests.
+The good news is that I don't have to memorise this whole list.
+Each time we run the car, the team will agree the exact details of the profile(s) the day before we run.
+Each run will have a long list of test objectives.
+To fit all the test points in, I'm planning to break the run up into three phases, possibly more.
+For the first test run, we'll start with phase 1, a static engine test, to check engine start-up procedure, check for leaks and check the onboard systems.
+After that, phase 2 will be the first rolling test.
+Phase 3 of the first test run (which we may need to repeat a couple of times) will use gentle acceleration (no reheat) to accelerate to a maximum of 100 mph.
+There's more to add to that list, but you get the general idea.
+They'll produce some really exciting shots of jet engine reheat and the desert tearing past at 500+ mph, all of which we will be posting on the Bloodhound website over the next few weeks.
+Finally, when we get to South Africa, I'll get to wear the new "Bloodhound LSR" race helmet for the first time.
