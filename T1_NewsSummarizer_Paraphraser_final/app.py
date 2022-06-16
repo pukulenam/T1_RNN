@@ -24,8 +24,12 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SECRET_KEY'] = 'supersecretkey'
 app.config['UPLOAD_FOLDER'] = 'uploaded_files'
 
-@app.route('/home', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
+    return render_template('index.html')
+
+@app.route('/home', methods=['GET', 'POST'])
+def main():
     return render_template('index.html')
 
 @app.route('/scraper', methods=['GET', 'POST'])
