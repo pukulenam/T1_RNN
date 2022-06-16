@@ -12,7 +12,7 @@ nltk.download('stopwords')
 def LSA(file):
     f = open(file, 'r', encoding="utf8")
     DOCUMENT = f.read()
-
+    DOCUMENT = re.sub(r'(?<=[.,])(?=[^\s])', r' ', str(DOCUMENT))
     DOCUMENT = re.sub(r'\n|\r', ' ', str(DOCUMENT))
     DOCUMENT = re.sub(r' +', ' ', str(DOCUMENT))
     DOCUMENT = DOCUMENT.strip()
