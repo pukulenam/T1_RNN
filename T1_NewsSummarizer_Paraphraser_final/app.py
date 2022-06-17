@@ -2,7 +2,6 @@ from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms import FileField, SubmitField
 from wtforms.validators import InputRequired
-from werkzeug.utils import secure_filename
 
 import os
 import pegasus
@@ -36,22 +35,13 @@ def main():
 def scraper():
     return render_template('scraper.html')
 
-    # proc = subprocess.Popen("php templates/scraper.php", shell=True, stdout=subprocess.PIPE)
-    # script_response = proc.stdout.read()
-    # w_dir = os.getcwd()
-    # out = sp.run(["php", os.path.join(w_dir, "templates/scraper.php")], stdout=sp.PIPE)
-    # return out.stdout
-
-# @app.route('/output_scraper', methods=['GET', 'POST'])
-# def output_scraper():
-#     return render_template('output_scraper.html')
 
 @app.route('/lsa', methods=['GET', 'POST'])
 def lsa():
     form = UploadFileForm()        
     if form.validate_on_submit():
         file = form.file.data
-        path = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], secure_filename(file.filename))
+        path = file.filename
         file.save(path)
         text = LSA.LSA(path)
         return render_template('output_lsa.html', news_sum=text)
@@ -62,7 +52,7 @@ def lsa_pegasus():
     form = UploadFileForm()        
     if form.validate_on_submit():
         file = form.file.data
-        path = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], secure_filename(file.filename))
+        path = file.filename
         file.save(path)
         text = LSA.LSA(path)
         paraphrase_text = pegasus.paraphrase(text)
@@ -70,4 +60,4 @@ def lsa_pegasus():
     return render_template('index2.html', form=form)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
