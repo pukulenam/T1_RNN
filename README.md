@@ -1,5 +1,8 @@
 # PEO1 NEWS SUMMARIZER & PARAPHRASER
 
+You can access our application here
+https://pukul-enam-t1.uc.r.appspot.com/
+
 ## Download Repository 
 
 Download repository into device using `git clone`. Url
@@ -29,7 +32,8 @@ To change the framework of the API, you can use the scraper file in the reposito
 
 ## Use The Application 
 * Clone the Repository.
-* Download the requirements.
+* cd to this folder T1_NewsSummarizer_Paraphraser_final
+* Download all the requirements on requirements.txt
 * Run on your Local Host.
 
 
@@ -66,5 +70,7 @@ Untuk mengubah kerangka dari API bisa menggunakan file scraper yang ada di dalam
 
 ## Penggunaan Seluruh Aplikasi 
 * Clone the Repository.
-* Download the requirements.
+* cd ke folder T1_NewsSummarizer_Paraphraser_final
+* unduh semua yang ada di requirements.txt.
+* Run di Local Host.
 
